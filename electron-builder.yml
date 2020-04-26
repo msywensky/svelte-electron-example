@@ -1,5 +1,5 @@
 productName: "mike test svelte"
-appId: "com.pfizerinternationa.svelte-electron-test"
+appId: "com.pfizerinternationa.svelte-electron-example"
 copyright: "Copyright © 2020 Mike Sywensky"
 
 # Package app code into a asar archive. Set to false to debug issues.
