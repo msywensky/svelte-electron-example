@@ -1,6 +1,6 @@
-productName: "svelte-electron-better-sqlite3-starter"
-appId: "cat.nye.svelte-electron-better-sqlite3-starter"
-copyright: "Copyright © 2019 Albert Sunyer Vilafranca"
+productName: "mike test svelte"
+appId: "com.pfizerinternationa.svelte-electron-test"
+copyright: "Copyright © 2020 Mike Sywensky"
 
 # Package app code into a asar archive. Set to false to debug issues.
 asar: true

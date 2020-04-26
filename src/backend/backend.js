@@ -22,6 +22,9 @@ if(process.argv[2] === '--subprocess'){
 			if(err) throw err;
 			console.log('"' + dbOriginPath + '" copied to "' + dbDestinyPath + '"');
 		});
+	} else {
+		console.log("using " + dbDestinyPath + " for databaser");
+	
 	}
 
 	const db = require('better-sqlite3')(dbDestinyPath);
@@ -29,9 +32,12 @@ if(process.argv[2] === '--subprocess'){
   	ipc.init(socketName, backendHandlers, db);
 }else{
 	const { ipcRenderer, remote } = require('electron');
-	const db = require('better-sqlite3')(__dirname + '/../../database.db', {verbose: console.log});
+	const dbPath = __dirname + '/../../database.db';
+	const db = require('better-sqlite3')(dbPath, {verbose: console.log});
 
-  	isDev = true;
+	console.log("using database here " + dbPath);
+
+	isDev = true;
   	version = remote.app.getVersion();
 
   	ipcRenderer.on('set-socket', (event, { name }) => {

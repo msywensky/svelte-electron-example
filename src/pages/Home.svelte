@@ -8,6 +8,9 @@
 	<Hello />
 </main>
 
+<svelte:head>
+	<link rel="stylesheet" type="text/css" href="bulma/css/bulma.css">
+</svelte:head>
 
 <style lang="scss">
 	main{
