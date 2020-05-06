@@ -20,7 +20,7 @@ function createMainWindow(serverSocket){
 
 	mainWindow = new BrowserWindow({
 		webPreferences: {
-			nodeIntegration: false,
+			nodeIntegration: true,
 			preload: __dirname + '/preload.js'
 		},
 		title: app.name,

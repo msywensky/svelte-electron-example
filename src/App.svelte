@@ -1,14 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
-	import { routes } from './routes';
-	import { Router } from 'svelte-hash-router';
+	import Body from './common/Body.svelte';
 
 	import { isLoading } from './stores/ui';
 
 	import { init as ipcInit } from './ipc';
+	import 'bulma/css/bulma.css';
 	import GlobalStyles from './styles/GlobalStyles.svelte';
 	import Topbar from './common/Topbar.svelte';
-	import 'bulma/css/bulma.css'
 
 
 	// Init IPC comunication with the backend
@@ -31,7 +30,7 @@
 
 <div class="wrapper">
 	<Topbar/>
-	<Router/>
+	<Body />
 </div>
 
 
